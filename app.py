@@ -4,17 +4,18 @@ import random
 app = Flask(__name__)
 
 charadas = [
-    {'id': 1, 'texto': 'Quanto mais se tira, maior ele fica. O que é?', 'resposta': 'buraco'},
-    {'id': 2, 'texto': 'O que é que corre ao redor do quintal sem sair do lugar?', 'resposta': 'cerca'},
-    {'id': 3, 'texto': 'Quem é que faz a viagem deitado?', 'resposta': 'rio'},  
-    {'id': 4, 'texto': 'O que é que tem cabeça e tem dente, mas não é gente?', 'resposta': 'alho'},
-    {'id': 5, 'texto': 'Quem é que sobe e desce sem sair do lugar?', 'resposta': 'escada'},  
-    {'id': 6, 'texto': 'O que é que quanto mais se divide, mais se multiplica?', 'resposta': 'bactéria'},
-    {'id': 7, 'texto': 'O que é que você pode segurar sem nunca tocar?', 'resposta': 'conversa'},
-    {'id': 8, 'texto': 'O que é que tem cidades, mas não tem casas; tem rios, mas não tem água; tem florestas, mas não tem árvores?', 'resposta': 'mapa'},
-    {'id': 9, 'texto': 'O que é que quanto mais você tira, mais ele aumenta?', 'resposta': 'foto'},  
-    {'id': 10, 'texto': 'O que é que você sempre encontra no final de tudo?', 'resposta': 'letra u'}
+    {'id': 1, 'texto': 'buraco', 'resposta': 'Quanto mais se tira, maior ele fica. O que é?'},
+    {'id': 2, 'texto': 'cerca', 'resposta': 'O que é que corre ao redor do quintal sem sair do lugar?'},
+    {'id': 3, 'texto': 'rio', 'resposta': 'Quem é que faz a viagem deitado?'},  
+    {'id': 4, 'texto': 'alho', 'resposta': 'O que é que tem cabeça e tem dente, mas não é gente?'},
+    {'id': 5, 'texto': 'escada', 'resposta': 'Quem é que sobe e desce sem sair do lugar?'},  
+    {'id': 6, 'texto': 'bactéria', 'resposta': 'O que é que quanto mais se divide, mais se multiplica?'},
+    {'id': 7, 'texto': 'conversa', 'resposta': 'O que é que você pode segurar sem nunca tocar?'},
+    {'id': 8, 'texto': 'mapa', 'resposta': 'O que é que tem cidades, mas não tem casas; tem rios, mas não tem água; tem florestas, mas não tem árvores?'},
+    {'id': 9, 'texto': 'foto', 'resposta': 'O que é que quanto mais você tira, mais ele aumenta?'},  
+    {'id': 10, 'texto': 'letra u', 'resposta': 'O que é que você sempre encontra no final de tudo?'}
 ]
+
 
 @app.route('/')
 def index():
