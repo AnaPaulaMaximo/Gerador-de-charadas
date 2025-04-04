@@ -3,10 +3,14 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
 
+load_dotenv()
+
+#pega a variável de ambiente e converte para JSON
 FBKEY = json.loads(os.getenv('CONFIG_FIREBASE'))
 
 cred = credentials.Certificate(FBKEY)
