@@ -111,5 +111,20 @@ def excluir_charada(id):
     doc_ref.delete()
     return jsonify({'mensagem':'Charada excluida com sucesso!'})
 
+# MÉTODO GET - LISTAR CHARADAS
+@app.route('/charadas/lista', methods=['GET'])
+def charadas_lista():
+    charadas = []
+
+    lista = db.collection('charadas').stream()
+
+    for item in lista:
+        charadas.append(item.to_dict())
+
+    if charadas:
+        return jsonify(charadas), 200
+    else:
+        return jsonify({'mensagem': 'Erro! nenhuma charada cadastrada'}), 404
+
 if __name__ == '__main__':
     app.run()
